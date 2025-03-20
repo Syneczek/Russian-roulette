@@ -1,5 +1,8 @@
-let ammo = 0;
+// --->Zrobić animację w JavaScrip<---
 
+
+let ammo = 0;
+let animationCount = 1;
 
 function load() {
     if(ammo < 6){
@@ -36,6 +39,7 @@ function shoot(){
     function myEndFunction(){
         document.querySelectorAll(".slot").forEach(b => b.style.backgroundColor = "");
         document.getElementById("big-circle").style.animationPlayState = "paused"
+        document.getElementById("big-circle").style.animationIterationCount = 1;
         console.log("cods");
         document.documentElement.style.setProperty('--count',0 + "deg");
     }

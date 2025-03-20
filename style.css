@@ -41,6 +41,7 @@ body{
     transform: rotate(calc(360deg/6 * var(--i)));
     transform-origin:300px;
     border: 3px rgb(55, 55, 55) solid;
+    animation-iteration-count:1;
 }
 .slot2{
     top:41%;

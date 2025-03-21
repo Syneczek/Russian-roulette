@@ -14,12 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function shoot() {
-    button.style.visibility = "hidden";
+    
     let div = document.getElementById("big-circle");
     result.innerHTML = "";
     if (ammo == 0) {
       console.log("Załaduj");
     } else {
+      button.style.visibility = "hidden";
       let mag = [0, 0, 0, 0, 0, 0];
       for (let i = 0; i < ammo; i++) {
         mag[i] = 1;
@@ -86,9 +87,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelectorAll(".slot").forEach((box) => {
     box.addEventListener("click", function () {
-      if (this.style.backgroundColor != "blue") {
+      if (this.style.backgroundColor != "rgb(107, 0, 0)") {
         load();
-        this.style.backgroundColor = "blue";
+        this.style.backgroundColor = "rgb(107, 0, 0)";
       }
     });
   });

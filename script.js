@@ -1,4 +1,10 @@
+// --->Zrobić animację w JavaScrip<---
+    
+
 let ammo = 0;
+let animationCount = 0;
+
+
 
 
 function load() {
@@ -16,7 +22,7 @@ function shoot(){
     for(i = 0; i<ammo;i++){
         mag[i] = 1;
         }
-        let luck = Math.floor(Math.random()* 5)
+        let luck = Math.floor(Math.random()* 5);
         console.log(mag[luck]);
         console.log(luck);
         let root = document.documentElement;
@@ -30,12 +36,16 @@ function shoot(){
         }
         ammo = 0;
         div.addEventListener("animationend", myEndFunction);
+
         
+        
+          
     }
     
     function myEndFunction(){
         document.querySelectorAll(".slot").forEach(b => b.style.backgroundColor = "");
         document.getElementById("big-circle").style.animationPlayState = "paused"
+        document.getElementById("big-circle").style.animationIterationCount = 2;
         console.log("cods");
         document.documentElement.style.setProperty('--count',0 + "deg");
     }

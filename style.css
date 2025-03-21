@@ -11,7 +11,7 @@ body{
     --background-color:rgb(39, 39, 39);
 }
 #big-circle{
-    transform: rotate(90deg);
+    transform: rotate(30deg);
     height: 800px;
     width: 800px;
     border-radius: 50%;
@@ -20,10 +20,10 @@ body{
     justify-content: center;
     align-items: center;
     position: relative; /*zostawic relative*/
-    animation-name: roll; 
+    /* animation-name: roll; 
     animation-duration: 3s;
-    animation-play-state: paused;
-    animation-fill-mode: forwards;
+     animation-play-state: paused;
+    animation-fill-mode: forwards; */
     background-image: url("metal2.png");
     background-position: center;
     
@@ -41,6 +41,7 @@ body{
     transform: rotate(calc(360deg/6 * var(--i)));
     transform-origin:300px;
     border: 3px rgb(55, 55, 55) solid;
+    animation-iteration-count:1;
 }
 .slot2{
     top:41%;
@@ -56,14 +57,21 @@ body{
 }
 @keyframes roll{
     0%{
-        transform: rotate(90deg);
+        transform: rotate(30deg);
     }
     100%{
-        transform: rotate(calc(810deg + var(--count)));
+        transform: rotate(calc(750deg - var(--count)));
 
     }
     
 }
 #big-circle button{
-    transform: rotate(-90deg);
+    transform: rotate(-30deg);
+}
+.spin-animation {
+    animation-name: roll;
+    animation-duration: 3.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }

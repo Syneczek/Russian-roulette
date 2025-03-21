@@ -1,7 +1,7 @@
 body{
     height: 100vh;
     display: flex;
-    flex-direction:row;
+    flex-direction:column;
     justify-content: center;
     align-items: center;
     background-color: var(--background-color);
@@ -60,7 +60,7 @@ body{
         transform: rotate(30deg);
     }
     100%{
-        transform: rotate(calc(750deg - var(--count)));
+        transform: rotate(calc(1110deg - var(--count)));
 
     }
     
@@ -70,8 +70,12 @@ body{
 }
 .spin-animation {
     animation-name: roll;
-    animation-duration: 3.5s;
-    animation-timing-function: ease;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation-fill-mode:forwards;
+}
+#result{
+    margin-top: 200px;
+    position: absolute;
 }

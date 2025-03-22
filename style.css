@@ -1,14 +1,14 @@
 body{
     height: 100vh;
     display: flex;
-    flex-direction:row;
+    flex-direction:column;
     justify-content: center;
     align-items: center;
     background-color: var(--background-color);
 }
 :root{
     --count:0deg;
-    --background-color:rgb(39, 39, 39);
+    --background-color:rgb(26, 10, 10);
 }
 #big-circle{
     transform: rotate(30deg);
@@ -34,7 +34,7 @@ body{
     top:41%;
     left:12%;
     position: absolute; /*zostawic absolute*/
-    background-color: rgb(18, 18, 18);
+    background-color: rgb(26, 25, 25);
     height: 140px;
     width: 140px;
     border-radius: 100px;
@@ -60,18 +60,33 @@ body{
         transform: rotate(30deg);
     }
     100%{
-        transform: rotate(calc(750deg - var(--count)));
+        transform: rotate(calc(1110deg - var(--count)));
 
     }
     
 }
-#big-circle button{
-    transform: rotate(-30deg);
-}
+
 .spin-animation {
     animation-name: roll;
-    animation-duration: 3.5s;
-    animation-timing-function: ease;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation-fill-mode:forwards;
+}
+#result{
+    margin-top: 200px;
+    position: absolute;
+}
+#shoot-button{
+    width: 100px;
+    height: 100px;
+    background-image: url("icon.jpg");
+    background-position: center;
+    background-size: 180px 180px;
+    border-radius: 50%;
+    transform: rotate(-30deg);
+}
+#shoot-button:hover{
+    cursor: pointer;
+    border: 5px solid  rgb(107, 0, 0);
 }

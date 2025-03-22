@@ -5,4 +5,4 @@ Features to do:
 - improved design
 - win/loose animations
 - make bullets to look like bullets
-- delay after animation end
+- delay after animation

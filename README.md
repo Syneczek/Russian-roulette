@@ -6,3 +6,4 @@ Features to do:
 - win/loose animations
 - make bullets to look like bullets
 - delay after animation
+- hover button animation

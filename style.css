@@ -1,5 +1,5 @@
 /*Użyj :root do stworzenia zmiennej dla kazdej wartosci. W przypadku gdy ekran jest za mały, wartosc będzie się zmniejszac mozna sprobowac uzyc odjęcia %*/
-
+/*Przyszykowac transform origin*/
 
 
 
@@ -18,11 +18,21 @@ body{
 :root{
     --count:0deg;
     --background-color:rgb(31, 24, 24);
+    --big-circle-size:800px;
+    --slot-size:140px;
 }
+@media only screen and (max-width: 830px) {
+    :root{
+        --big-circle-size:400px;
+        --slot-size:70px;
+    }
+}
+
+
 #big-circle{
     transform: rotate(30deg);
-    height: 800px;
-    width: 800px;
+    height: var(--big-circle-size);
+    width: var(--big-circle-size);
     border-radius: 50%;
     /* border: 3px rgb(45, 45, 45) solid; */
     display: flex;
@@ -45,8 +55,8 @@ body{
     left:12%;
     position: absolute; /*zostawic absolute*/
     background-color: rgb(26, 25, 25);
-    height: 140px;
-    width: 140px;
+    height: var(--slot-size);
+    width: var(--slot-size);
     border-radius: 100px;
     transform: rotate(calc(360deg/6 * var(--i)));
     transform-origin:300px;
@@ -58,8 +68,8 @@ body{
     left:-11%;
     position: absolute; /*zostawic absolute*/
     background-color:var(--background-color);
-    height: 140px;
-    width: 140px;
+    height: var(--slot-size);
+    width: var(--slot-size);
     border-radius: 100px;
     transform: rotate(calc(360deg/6 * var(--i)));
     transform-origin:490px;

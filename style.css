@@ -1,5 +1,13 @@
+/*Użyj :root do stworzenia zmiennej dla kazdej wartosci. W przypadku gdy ekran jest za mały, wartosc będzie się zmniejszac mozna sprobowac uzyc odjęcia %*/
+
+
+
+
+
+
 body{
-    height: 100vh;
+    min-height: 100vh;
+    min-width: 100vw;
     display: flex;
     flex-direction:column;
     justify-content: center;

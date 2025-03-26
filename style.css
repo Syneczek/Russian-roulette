@@ -5,6 +5,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: var(--background-color);
+    
 }
 :root{
     --count:0deg;
@@ -22,10 +23,11 @@ body{
     position: relative; /*zostawic relative*/
     /* animation-name: roll; 
     animation-duration: 3s;
-     animation-play-state: paused;
-    animation-fill-mode: forwards; */
+     animation-play-state: paused;*/
+    animation-fill-mode: forwards; 
     background-image: url("metal2.png");
     background-position: center;
+
     
 
 }
@@ -68,7 +70,7 @@ body{
 
 .spin-animation {
     animation-name: roll;
-    animation-duration: 3s;
+    animation-duration: 2.5s;
     animation-timing-function: ease-out;
     animation-iteration-count: 1;
     animation-fill-mode:forwards;

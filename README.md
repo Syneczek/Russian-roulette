@@ -5,5 +5,5 @@ Features to do:
 - improved design
 - win/loose animations
 - make bullets to look like bullets
-- delay after animation
+- delay after animation  --->Done, but not pushed to main yet<---
 - hover button animation

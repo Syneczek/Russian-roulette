@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (box.style.backgroundColor === "rgb(107, 0, 0)") {
           mag[index] = 1;
         }
+        
       });
 
       let luck = Math.floor(Math.random() * 6);
@@ -94,6 +95,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (this.style.backgroundColor != "rgb(107, 0, 0)") {
         load();
         this.style.backgroundColor = "rgb(107, 0, 0)";
+      }else{
+        this.style.backgroundColor = "rgb(26, 25, 25)";
+        ammo -= 1;
       }
     });
   });

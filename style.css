@@ -1,19 +1,56 @@
+/*Użyj :root do stworzenia zmiennej dla kazdej wartosci. W przypadku gdy ekran jest za mały, wartosc będzie się zmniejszac mozna sprobowac uzyc odjęcia %*/
+/*Przyszykowac transform origin*/
+
+
+
+
+
 body{
-    height: 100vh;
+    min-height: 100vh;
+    min-width: 100vw;
     display: flex;
     flex-direction:column;
     justify-content: center;
     align-items: center;
     background-color: var(--background-color);
+    
 }
 :root{
     --count:0deg;
+
+    --background-color:rgb(31, 24, 24);
+    --big-circle-size:800px;
+    --slot-size:140px;
+    --transform-origin1:300px ;
+    --transform-origin2:490px ;
+    --button:100px;
+    --background-button:180px;
+
     --background-color:rgb(26, 10, 10);
+
 }
+@media only screen and (max-width: 830px) {
+    :root{
+        --big-circle-size:200px;
+        --slot-size:35px;
+        --transform-origin1:75px;
+        --transform-origin2:122.5px;
+        --button:25px;
+        --background-button:45px;
+        #shoot-button:hover{
+            border: 2px solid  rgb(107, 0, 0);
+        }
+        #result{
+            margin-top: 100px;
+        }
+    }
+}
+
+
 #big-circle{
     transform: rotate(30deg);
-    height: 800px;
-    width: 800px;
+    height: var(--big-circle-size);
+    width: var(--big-circle-size);
     border-radius: 50%;
     /* border: 3px rgb(45, 45, 45) solid; */
     display: flex;
@@ -22,10 +59,11 @@ body{
     position: relative; /*zostawic relative*/
     /* animation-name: roll; 
     animation-duration: 3s;
-     animation-play-state: paused;
-    animation-fill-mode: forwards; */
+     animation-play-state: paused;*/
+    animation-fill-mode: forwards; 
     background-image: url("metal2.png");
     background-position: center;
+
     
 
 }
@@ -35,11 +73,16 @@ body{
     left:12%;
     position: absolute; /*zostawic absolute*/
     background-color: rgb(26, 25, 25);
+
+    height: var(--slot-size);
+    width: var(--slot-size);
+
     height: 140px;
     width: 140px;
+
     border-radius: 100px;
     transform: rotate(calc(360deg/6 * var(--i)));
-    transform-origin:300px;
+    transform-origin:var(--transform-origin1);
     border: 3px rgb(55, 55, 55) solid;
     animation-iteration-count:1;
 }
@@ -48,11 +91,11 @@ body{
     left:-11%;
     position: absolute; /*zostawic absolute*/
     background-color:var(--background-color);
-    height: 140px;
-    width: 140px;
+    height: var(--slot-size);
+    width: var(--slot-size);
     border-radius: 100px;
     transform: rotate(calc(360deg/6 * var(--i)));
-    transform-origin:490px;
+    transform-origin:var(--transform-origin2);
     /* border-top: 3px rgb(55, 55, 55) solid; */
 }
 @keyframes roll{
@@ -68,7 +111,11 @@ body{
 
 .spin-animation {
     animation-name: roll;
+
+    animation-duration: 2.5s;
+
     animation-duration: 3s;
+
     animation-timing-function: ease-out;
     animation-iteration-count: 1;
     animation-fill-mode:forwards;
@@ -78,15 +125,27 @@ body{
     position: absolute;
 }
 #shoot-button{
+
+    width: var(--button);
+    height: var(--button);
+    background-image: url("icon.jpg");
+    background-position: center;
+    background-size: var(--background-button) var(--background-button);
+
     width: 100px;
     height: 100px;
     background-image: url("icon.jpg");
     background-position: center;
     background-size: 180px 180px;
+
     border-radius: 50%;
     transform: rotate(-30deg);
 }
 #shoot-button:hover{
     cursor: pointer;
     border: 5px solid  rgb(107, 0, 0);
+
 }
+
+}
+

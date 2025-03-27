@@ -37,7 +37,8 @@ body{
             border: 2px solid  rgb(107, 0, 0);
         }
         #result{
-            margin-top: 100px;
+            argin-top: 280px;
+            color:white;
         }
     }
 }

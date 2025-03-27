@@ -17,7 +17,6 @@ body{
 }
 :root{
     --count:0deg;
-
     --background-color:rgb(31, 24, 24);
     --big-circle-size:800px;
     --slot-size:140px;
@@ -25,9 +24,6 @@ body{
     --transform-origin2:490px ;
     --button:100px;
     --background-button:180px;
-
-    --background-color:rgb(26, 10, 10);
-
 }
 @media only screen and (max-width: 830px) {
     :root{
@@ -73,13 +69,8 @@ body{
     left:12%;
     position: absolute; /*zostawic absolute*/
     background-color: rgb(26, 25, 25);
-
     height: var(--slot-size);
     width: var(--slot-size);
-
-    height: 140px;
-    width: 140px;
-
     border-radius: 100px;
     transform: rotate(calc(360deg/6 * var(--i)));
     transform-origin:var(--transform-origin1);
@@ -111,11 +102,7 @@ body{
 
 .spin-animation {
     animation-name: roll;
-
     animation-duration: 2.5s;
-
-    animation-duration: 3s;
-
     animation-timing-function: ease-out;
     animation-iteration-count: 1;
     animation-fill-mode:forwards;
@@ -125,27 +112,15 @@ body{
     position: absolute;
 }
 #shoot-button{
-
     width: var(--button);
     height: var(--button);
     background-image: url("icon.jpg");
     background-position: center;
     background-size: var(--background-button) var(--background-button);
-
-    width: 100px;
-    height: 100px;
-    background-image: url("icon.jpg");
-    background-position: center;
-    background-size: 180px 180px;
-
     border-radius: 50%;
     transform: rotate(-30deg);
 }
 #shoot-button:hover{
     cursor: pointer;
     border: 5px solid  rgb(107, 0, 0);
-
 }
-
-}
-

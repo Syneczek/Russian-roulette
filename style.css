@@ -37,7 +37,7 @@ body{
             border: 2px solid  rgb(107, 0, 0);
         }
         #result{
-            argin-top: 280px;
+            margin-top: 280px;
             color:white;
         }
     }

@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (box.style.backgroundColor === "rgb(107, 0, 0)") {
           mag[index] = 1;
         }
-        
       });
 
       let luck = Math.floor(Math.random() * 6);
@@ -73,29 +72,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add the animation class to start the animation
     element.classList.add(animationClass);
-    
 
     // Set up the onanimationend event handler
 
-      element.onanimationend = function () {
+    element.onanimationend = function () {
       setTimeout(() => {
         button.style.visibility = "visible";
         element.classList.remove(animationClass);
-  
-  
-          myEndFunction();
-      }
-      , 1000);
-      
-      };
-    }
+
+        myEndFunction();
+      }, 1000);
+    };
+  }
 
   document.querySelectorAll(".slot").forEach((box) => {
     box.addEventListener("click", function () {
       if (this.style.backgroundColor != "rgb(107, 0, 0)") {
         load();
         this.style.backgroundColor = "rgb(107, 0, 0)";
-      }else{
+      } else {
         this.style.backgroundColor = "rgb(26, 25, 25)";
         ammo -= 1;
       }

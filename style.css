@@ -20,11 +20,25 @@ body{
     --background-color:rgb(31, 24, 24);
     --big-circle-size:800px;
     --slot-size:140px;
+    --transform-origin1:300px ;
+    --transform-origin2:490px ;
+    --button:100px;
+    --background-button:180px;
 }
 @media only screen and (max-width: 830px) {
     :root{
-        --big-circle-size:400px;
-        --slot-size:70px;
+        --big-circle-size:200px;
+        --slot-size:35px;
+        --transform-origin1:75px;
+        --transform-origin2:122.5px;
+        --button:25px;
+        --background-button:45px;
+        #shoot-button:hover{
+            border: 2px solid  rgb(107, 0, 0);
+        }
+        #result{
+            margin-top: 100px;
+        }
     }
 }
 
@@ -59,7 +73,7 @@ body{
     width: var(--slot-size);
     border-radius: 100px;
     transform: rotate(calc(360deg/6 * var(--i)));
-    transform-origin:300px;
+    transform-origin:var(--transform-origin1);
     border: 3px rgb(55, 55, 55) solid;
     animation-iteration-count:1;
 }
@@ -72,7 +86,7 @@ body{
     width: var(--slot-size);
     border-radius: 100px;
     transform: rotate(calc(360deg/6 * var(--i)));
-    transform-origin:490px;
+    transform-origin:var(--transform-origin2);
     /* border-top: 3px rgb(55, 55, 55) solid; */
 }
 @keyframes roll{
@@ -98,11 +112,11 @@ body{
     position: absolute;
 }
 #shoot-button{
-    width: 100px;
-    height: 100px;
+    width: var(--button);
+    height: var(--button);
     background-image: url("icon.jpg");
     background-position: center;
-    background-size: 180px 180px;
+    background-size: var(--background-button) var(--background-button);
     border-radius: 50%;
     transform: rotate(-30deg);
 }

@@ -7,4 +7,4 @@ Features to do:
 - make bullets to look like bullets 
 - delay after animation  --->Done, but not pushed to main yet<---
 - hover button animation
-- make phone version
+- make phone version  --->Done, but not pushed to main yet<---
